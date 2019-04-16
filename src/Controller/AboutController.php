@@ -22,6 +22,11 @@ class AboutController extends AbstractController
      */
     public function contact()
     {
-        return $this->render('about/contact.html.twig');
+        $name = 'Anonymous';
+        $pass = 'nopass';
+
+        return $this->render('about/contact.html.twig',
+            ['userName' => $name,
+                'password' => $pass]);
     }
 }
